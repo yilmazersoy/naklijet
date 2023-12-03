@@ -14,21 +14,3 @@ BSP Academy tarafından techcareer.com TransPortathon Hackathon yarışması iç
 
 #### NakliJET Database Diyagram
 ![Database Diagram](https://github.com/mrttyyldrm/naklijet/assets/98252720/d7a95964-60b8-4d1a-8983-19c9e6ccccf9)
-
-## Canlı Deneyin
-Projemizi web site adresimiz üzerinden canlı olarak test edebilirsiniz.
-
-#### Web Uygulaması: https://naklijet.bsp-academy.com
-#### Kullanıcı Paneli: https://naklijet.bsp-academy.com/customer.html 
-#### Firma Paneli: https://naklijet.bsp-academy.com/business.html
-
-## Önizleme Hesap Bilgileri
-
-### Örnek Kullanıcı:
-#### Kullanıcı Adı: mertyildirim | Parola: Mert123*
-
-### Örnek Firma:
-#### Kullanıcı Adı: techcareer | Parola: Techcareer123*
-
-## İletişim
-#### E Posta: mrttyyldrm@gmail.com
