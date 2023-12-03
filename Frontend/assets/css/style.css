@@ -1,0 +1,2939 @@
+/*#region Component Codes*/
+main section#request #request-content .step#count .step-container .step-info p, main section#request #request-content .step#count .step-container .step-content .option .option-count p, main section#business #business-content article#chat #chat-send textarea, main section#business #business-content article#chat #chat-content .message span, main section#business #business-content article#messages #messages-content #messages-chats .chat .chat-info p, main section#business #business-content article#crew #crew-content .crew-group .member .member-data p, main section#business #business-content article#ads #ads-content .ad .ad-content .ad-info p, main section#business #business-content article#ads #ads-content .ad .ad-content .ad-data p, main section#business #business-content article#sales #sales-content .sale .sale-content .sale-info p, main section#business #business-content article#sales #sales-content .sale .sale-content .sale-data p, main section#business #business-content article#sales #sales-content .sale .sale-title .sale-status p, main section#customer #customer-content article#chat #chat-send textarea, main section#customer #customer-content article#chat #chat-content .message span, main section#customer #customer-content article#messages #messages-content #messages-chats .chat .chat-info p, main section#customer #customer-content article#rating #rating-content #rating-comment textarea, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time p, main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-data p, main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-info p, main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-data p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-date p, main section#customer #customer-content article#orders #orders-content .order .order-content .order-info p, main section#customer #customer-content article#orders #orders-content .order .order-content .order-data p, main section#customer #customer-content article#orders #orders-content .order .order-title .order-status p, main section#register #register-button p, main section#login #login-button p, main section#home #home-button #home-line p, main aside #aside-logout p, main aside #aside-content #aside-menu nav ul li p, main section#request #request-content .step .step-container .step-title p, main section#business #business-content article#messages #messages-title p, main section#business #business-content article#crew #crew-title p, main section#business #business-content article#ads #ads-title p, main section#business #business-content article#sales #sales-title p, main section#customer #customer-content article#messages #messages-title p, main section#customer #customer-content article#rating #rating-title p, main section#customer #customer-content article#offers #offers-title p, main section#customer #customer-content article#claims #claims-title p, main section#customer #customer-content article#orders #orders-title p, main section#register #register-content #register-title p, main section#login #login-content #login-title p, main section#home #home-content #home-title p, main #error #error-container #error-content #error-title p, main #success #success-container #success-content #success-title p, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-title p, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-title p, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-title p, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-title p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title p {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Quicksand", sans-serif;
+  color: #999CAD;
+}
+
+main section#request #request-content .step .step-container .step-title, main section#business #business-content article#messages #messages-title, main section#business #business-content article#crew #crew-title, main section#business #business-content article#ads #ads-title, main section#business #business-content article#sales #sales-title, main section#customer #customer-content article#messages #messages-title, main section#customer #customer-content article#rating #rating-title, main section#customer #customer-content article#offers #offers-title, main section#customer #customer-content article#claims #claims-title, main section#customer #customer-content article#orders #orders-title, main section#register #register-content #register-title, main section#login #login-content #login-title, main section#home #home-content #home-title, main #error #error-container #error-content #error-title, main #success #success-container #success-content #success-title, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-title, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-title, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-title, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-title, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+main section#request #request-content .step .step-container .step-title h1, main section#business #business-content article#messages #messages-title h1, main section#business #business-content article#crew #crew-title h1, main section#business #business-content article#ads #ads-title h1, main section#business #business-content article#sales #sales-title h1, main section#customer #customer-content article#messages #messages-title h1, main section#customer #customer-content article#rating #rating-title h1, main section#customer #customer-content article#offers #offers-title h1, main section#customer #customer-content article#claims #claims-title h1, main section#customer #customer-content article#orders #orders-title h1, main section#register #register-content #register-title h1, main section#login #login-content #login-title h1, main section#home #home-content #home-title h1, main #error #error-container #error-content #error-title h1, main #success #success-container #success-content #success-title h1, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-title h1, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-title h1, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-title h1, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-title h1, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title h1, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title h1, main section#request #request-content .step .step-container .step-title h2, main section#business #business-content article#messages #messages-title h2, main section#business #business-content article#crew #crew-title h2, main section#business #business-content article#ads #ads-title h2, main section#business #business-content article#sales #sales-title h2, main section#customer #customer-content article#messages #messages-title h2, main section#customer #customer-content article#rating #rating-title h2, main section#customer #customer-content article#offers #offers-title h2, main section#customer #customer-content article#claims #claims-title h2, main section#customer #customer-content article#orders #orders-title h2, main section#register #register-content #register-title h2, main section#login #login-content #login-title h2, main section#home #home-content #home-title h2, main #error #error-container #error-content #error-title h2, main #success #success-container #success-content #success-title h2, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-title h2, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-title h2, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-title h2, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-title h2, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title h2, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+  line-height: 130%;
+}
+main section#request #request-content .step .step-container .step-content .form-control, main section#register #register-content #register-form .form-control, main section#login #login-content #login-form .form-control, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+main section#request #request-content .step .step-container .step-content .form-control label, main section#register #register-content #register-form .form-control label, main section#login #login-content #login-form .form-control label, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control label, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control label, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control label, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control label, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control label, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control label {
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#request #request-content .step .step-container .step-content .form-control .form-input, main section#register #register-content #register-form .form-control .form-input, main section#login #login-content #login-form .form-control .form-input, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+}
+main section#request #request-content .step .step-container .step-content .form-control .form-input input, main section#register #register-content #register-form .form-control .form-input input, main section#login #login-content #login-form .form-control .form-input input, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input, main section#request #request-content .step .step-container .step-content .form-control .form-input textarea, main section#register #register-content #register-form .form-control .form-input textarea, main section#login #login-content #login-form .form-control .form-input textarea, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#request #request-content .step .step-container .step-content .form-control .form-input select, main section#register #register-content #register-form .form-control .form-input select, main section#login #login-content #login-form .form-control .form-input select, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #141414;
+}
+main section#request #request-content .step .step-container .step-content .form-control .form-input input::-moz-placeholder, main section#register #register-content #register-form .form-control .form-input input::-moz-placeholder, main section#login #login-content #login-form .form-control .form-input input::-moz-placeholder, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::-moz-placeholder, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::-moz-placeholder, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::-moz-placeholder, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::-moz-placeholder, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::-moz-placeholder, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::-moz-placeholder, main section#request #request-content .step .step-container .step-content .form-control .form-input textarea::-moz-placeholder, main section#register #register-content #register-form .form-control .form-input textarea::-moz-placeholder, main section#login #login-content #login-form .form-control .form-input textarea::-moz-placeholder, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::-moz-placeholder, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::-moz-placeholder, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::-moz-placeholder, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::-moz-placeholder, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::-moz-placeholder, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::-moz-placeholder, main section#request #request-content .step .step-container .step-content .form-control .form-input select::-moz-placeholder, main section#register #register-content #register-form .form-control .form-input select::-moz-placeholder, main section#login #login-content #login-form .form-control .form-input select::-moz-placeholder, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::-moz-placeholder, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::-moz-placeholder, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::-moz-placeholder, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::-moz-placeholder, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::-moz-placeholder, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::-moz-placeholder {
+  color: #999CAD;
+}
+main section#request #request-content .step .step-container .step-content .form-control .form-input input::placeholder, main section#register #register-content #register-form .form-control .form-input input::placeholder, main section#login #login-content #login-form .form-control .form-input input::placeholder, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::placeholder, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::placeholder, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::placeholder, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::placeholder, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::placeholder, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input input::placeholder, main section#request #request-content .step .step-container .step-content .form-control .form-input textarea::placeholder, main section#register #register-content #register-form .form-control .form-input textarea::placeholder, main section#login #login-content #login-form .form-control .form-input textarea::placeholder, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::placeholder, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::placeholder, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::placeholder, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::placeholder, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::placeholder, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea::placeholder, main section#request #request-content .step .step-container .step-content .form-control .form-input select::placeholder, main section#register #register-content #register-form .form-control .form-input select::placeholder, main section#login #login-content #login-form .form-control .form-input select::placeholder, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::placeholder, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::placeholder, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::placeholder, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::placeholder, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::placeholder, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input select::placeholder {
+  color: #999CAD;
+}
+main section#request #request-content .step .step-container .step-content .form-control .form-input i, main section#register #register-content #register-form .form-control .form-input i, main section#login #login-content #login-form .form-control .form-input i, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input i, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input i, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input i, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input i, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input i, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input i {
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #999CAD;
+}
+main section#request #request-content .step .step-container .step-content .form-control .form-input textarea, main section#register #register-content #register-form .form-control .form-input textarea, main section#login #login-content #login-form .form-control .form-input textarea, main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .form-control .form-input textarea {
+  height: 25rem;
+  resize: none;
+}
+
+main section#business #business-content article#messages #messages-content, main section#business #business-content article#crew #crew-content .crew-group, main section#customer #customer-content article#messages #messages-content, main section#register #register-content #register-navigation {
+  padding: 2rem;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+
+main section#request #request-content .step#count .step-container .step-content hr, main section#business #business-content article#messages #messages-content #messages-chats hr, main section#business #business-content article#crew #crew-content .crew-group hr, main section#business #business-content article#ads #ads-content .ad .ad-content hr, main section#business #business-content article#sales #sales-content .sale .sale-content hr, main section#customer #customer-content article#messages #messages-content #messages-chats hr, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content hr, main section#customer #customer-content article#offers #offers-content .offer .offer-content hr, main section#customer #customer-content article#claims #claims-content .claim .claim-content hr, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container hr, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content hr, main section#customer #customer-content article#orders #orders-content .order .order-content hr, main section#home #home-button #home-line hr {
+  width: 100%;
+  height: 0.1rem;
+  border: none;
+  outline: none;
+  background-color: #E0DEF7;
+}
+
+main aside {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 30rem;
+  padding: 3rem 2rem;
+  background-color: #FFF;
+  border-right: 0.15rem solid #E0DEF7;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  transition: left 0.5s ease;
+}
+main aside.active {
+  left: 0;
+}
+main aside #aside-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+}
+main aside #aside-content #aside-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main aside #aside-content #aside-title img {
+  width: 15rem;
+}
+main aside #aside-content #aside-title i {
+  cursor: pointer;
+  font-size: 2rem;
+  color: #999CAD;
+}
+main aside #aside-content #aside-menu {
+  width: 100%;
+}
+main aside #aside-content #aside-menu nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+main aside #aside-content #aside-menu nav ul li {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.8rem;
+  transition: background-color 0.3s ease;
+}
+main aside #aside-content #aside-menu nav ul li:hover, main aside #aside-content #aside-menu nav ul li.active {
+  background-color: #FF6000;
+}
+main aside #aside-content #aside-menu nav ul li:hover p, main aside #aside-content #aside-menu nav ul li.active p {
+  color: #FFF;
+}
+main aside #aside-content #aside-menu nav ul li:hover .aside-icon i, main aside #aside-content #aside-menu nav ul li.active .aside-icon i {
+  color: #FFF;
+}
+main aside #aside-content #aside-menu nav ul li:hover span, main aside #aside-content #aside-menu nav ul li.active span {
+  background-color: #FFF;
+  color: #FF6000;
+}
+main aside #aside-content #aside-menu nav ul li.hidden {
+  cursor: default;
+}
+main aside #aside-content #aside-menu nav ul li .aside-icon {
+  width: 2.25rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main aside #aside-content #aside-menu nav ul li .aside-icon i {
+  font-size: 2.25rem;
+  color: #999CAD;
+  transition: color 0.3s ease;
+}
+main aside #aside-content #aside-menu nav ul li p {
+  transition: color 0.3s ease;
+}
+main aside #aside-content #aside-menu nav ul li span {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  background-color: #FF6000;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #FFF;
+  transition-property: background-color, color;
+  transition: 0.3s ease;
+}
+main aside #aside-logout {
+  cursor: pointer;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+}
+main aside #aside-logout #logout-icon {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main aside #aside-logout #logout-icon i {
+  font-size: 2.25rem;
+  color: #999CAD;
+}
+main section#business #business-content article#crew #vehicle-swipe, main section#business #business-content article#crew #member-swipe, main section#business #business-content article#ads #ads-swipe, main section#business #business-content article#sales #sales-swipe, main section#customer #customer-content article#offers #offers-swipe, main section#customer #customer-content article#orders #orders-swipe {
+  z-index: 98;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  background-color: #EFF2F9;
+  width: 100%;
+  max-width: 70rem;
+  height: 75vh;
+  border-top: 0.15rem solid #E0DEF7;
+  padding: 3rem 3rem 2rem 3rem;
+  border-radius: 2rem 2rem 0 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 2rem;
+  transition: bottom 0.5s ease;
+}
+main section#business #business-content article#crew .active#vehicle-swipe, main section#business #business-content article#crew .active#member-swipe, main section#business #business-content article#ads .active#ads-swipe, main section#business #business-content article#sales .active#sales-swipe, main section#customer #customer-content article#offers .active#offers-swipe, main section#customer #customer-content article#orders .active#orders-swipe {
+  bottom: 0;
+}
+main section#business #business-content article#crew #vehicle-swipe::after, main section#business #business-content article#crew #member-swipe::after, main section#business #business-content article#ads #ads-swipe::after, main section#business #business-content article#sales #sales-swipe::after, main section#customer #customer-content article#offers #offers-swipe::after, main section#customer #customer-content article#orders #orders-swipe::after {
+  content: "";
+  position: absolute;
+  top: 0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6rem;
+  height: 0.6rem;
+  background-color: #E5E6EB;
+  border-radius: 2rem;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content, main section#business #business-content article#crew #member-swipe #swipe-content, main section#business #business-content article#ads #ads-swipe #swipe-content, main section#business #business-content article#sales #sales-swipe #swipe-content, main section#customer #customer-content article#offers #offers-swipe #swipe-content, main section#customer #customer-content article#orders #orders-swipe #swipe-content {
+  position: relative;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe-loading, main section#business #business-content article#crew #member-swipe #swipe-content .swipe-loading, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe-loading, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe-loading, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe-loading, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 97;
+  width: 100%;
+  height: 100%;
+  background-color: #EFF2F9;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe-loading .loading-content, main section#business #business-content article#crew #member-swipe #swipe-content .swipe-loading .loading-content, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe-loading .loading-content, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe-loading .loading-content, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe-loading .loading-content, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe-loading .loading-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe-loading .loading-content i, main section#business #business-content article#crew #member-swipe #swipe-content .swipe-loading .loading-content i, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe-loading .loading-content i, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe-loading .loading-content i, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe-loading .loading-content i, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe-loading .loading-content i {
+  font-size: 3rem;
+  color: #999CAD;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe, main section#business #business-content article#crew #member-swipe #swipe-content .swipe, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #EFF2F9;
+  display: none;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe#vehicle, main section#business #business-content article#crew #member-swipe #swipe-content .swipe#vehicle, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe#vehicle, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe#vehicle, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe#vehicle, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe#vehicle {
+  display: block;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container {
+  overflow: hidden;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon {
+  margin-top: 0.5rem;
+  width: 8rem;
+  height: 8rem;
+  background-color: #FF6000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon i, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon i, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon i, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon i, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon i, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon i {
+  font-size: 3rem;
+  color: #FFF;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content {
+  overflow: auto;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option {
+  cursor: pointer;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #FFF;
+  transition: background-color 0.3s ease;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active {
+  background-color: #FF6000;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active p, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active p, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active p, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option.active p {
+  color: #FFF;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option p, main section#business #business-content article#crew #member-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option p, main section#business #business-content article#ads #ads-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option p, main section#business #business-content article#sales #sales-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-option p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+  transition: color 0.3s ease;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button, main section#business #business-content article#crew #member-swipe #swipe-button, main section#business #business-content article#ads #ads-swipe #swipe-button, main section#business #business-content article#sales #sales-swipe #swipe-button, main section#customer #customer-content article#offers #offers-swipe #swipe-button, main section#customer #customer-content article#orders #orders-swipe #swipe-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button#prev, main section#business #business-content article#crew #member-swipe #swipe-button button#prev, main section#business #business-content article#ads #ads-swipe #swipe-button button#prev, main section#business #business-content article#sales #sales-swipe #swipe-button button#prev, main section#customer #customer-content article#offers #offers-swipe #swipe-button button#prev, main section#customer #customer-content article#orders #orders-swipe #swipe-button button#prev {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  border: 0.3rem solid #FF6000;
+  background-color: #FFF;
+  color: #141414;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: 0.15rem solid #E0DEF7;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button#prev.active, main section#business #business-content article#crew #member-swipe #swipe-button button#prev.active, main section#business #business-content article#ads #ads-swipe #swipe-button button#prev.active, main section#business #business-content article#sales #sales-swipe #swipe-button button#prev.active, main section#customer #customer-content article#offers #offers-swipe #swipe-button button#prev.active, main section#customer #customer-content article#orders #orders-swipe #swipe-button button#prev.active {
+  opacity: 1;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button#prev.small, main section#business #business-content article#crew #member-swipe #swipe-button button#prev.small, main section#business #business-content article#ads #ads-swipe #swipe-button button#prev.small, main section#business #business-content article#sales #sales-swipe #swipe-button button#prev.small, main section#customer #customer-content article#offers #offers-swipe #swipe-button button#prev.small, main section#customer #customer-content article#orders #orders-swipe #swipe-button button#prev.small {
+  width: initial;
+  padding: 1.5rem 2rem;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button#prev.small i, main section#business #business-content article#crew #member-swipe #swipe-button button#prev.small i, main section#business #business-content article#ads #ads-swipe #swipe-button button#prev.small i, main section#business #business-content article#sales #sales-swipe #swipe-button button#prev.small i, main section#customer #customer-content article#offers #offers-swipe #swipe-button button#prev.small i, main section#customer #customer-content article#orders #orders-swipe #swipe-button button#prev.small i {
+  display: block;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button#prev.small p, main section#business #business-content article#crew #member-swipe #swipe-button button#prev.small p, main section#business #business-content article#ads #ads-swipe #swipe-button button#prev.small p, main section#business #business-content article#sales #sales-swipe #swipe-button button#prev.small p, main section#customer #customer-content article#offers #offers-swipe #swipe-button button#prev.small p, main section#customer #customer-content article#orders #orders-swipe #swipe-button button#prev.small p {
+  display: none;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button#prev i, main section#business #business-content article#crew #member-swipe #swipe-button button#prev i, main section#business #business-content article#ads #ads-swipe #swipe-button button#prev i, main section#business #business-content article#sales #sales-swipe #swipe-button button#prev i, main section#customer #customer-content article#offers #offers-swipe #swipe-button button#prev i, main section#customer #customer-content article#orders #orders-swipe #swipe-button button#prev i, main section#business #business-content article#crew #vehicle-swipe #swipe-button button#prev p, main section#business #business-content article#crew #member-swipe #swipe-button button#prev p, main section#business #business-content article#ads #ads-swipe #swipe-button button#prev p, main section#business #business-content article#sales #sales-swipe #swipe-button button#prev p, main section#customer #customer-content article#offers #offers-swipe #swipe-button button#prev p, main section#customer #customer-content article#orders #orders-swipe #swipe-button button#prev p {
+  color: #999CAD;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button#prev i, main section#business #business-content article#crew #member-swipe #swipe-button button#prev i, main section#business #business-content article#ads #ads-swipe #swipe-button button#prev i, main section#business #business-content article#sales #sales-swipe #swipe-button button#prev i, main section#customer #customer-content article#offers #offers-swipe #swipe-button button#prev i, main section#customer #customer-content article#orders #orders-swipe #swipe-button button#prev i {
+  display: none;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button#next, main section#business #business-content article#crew #member-swipe #swipe-button button#next, main section#business #business-content article#ads #ads-swipe #swipe-button button#next, main section#business #business-content article#sales #sales-swipe #swipe-button button#next, main section#customer #customer-content article#offers #offers-swipe #swipe-button button#next, main section#customer #customer-content article#orders #orders-swipe #swipe-button button#next {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 0.4;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button#next.active, main section#business #business-content article#crew #member-swipe #swipe-button button#next.active, main section#business #business-content article#ads #ads-swipe #swipe-button button#next.active, main section#business #business-content article#sales #sales-swipe #swipe-button button#next.active, main section#customer #customer-content article#offers #offers-swipe #swipe-button button#next.active, main section#customer #customer-content article#orders #orders-swipe #swipe-button button#next.active {
+  opacity: 1;
+}
+
+/*#endregion*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #EFF2F9;
+}
+
+section {
+  padding: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*#region Main Codes*/
+main {
+  /*#region Popups*/
+  /*#endregion*/
+}
+main #overlay {
+  z-index: 97;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: none;
+}
+main #loading {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  display: none;
+}
+main #loading #loading-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+main #loading #loading-content img {
+  width: 15rem;
+}
+main #loading #loading-content i {
+  font-size: 3rem;
+  color: #999CAD;
+}
+main #success {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  display: none;
+}
+main #success #success-container {
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+main #success #success-container #success-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+main #success #success-container #success-content #success-icon {
+  width: 17.5rem;
+  height: 17.5rem;
+  border-radius: 50%;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #success #success-container #success-content #success-icon i {
+  font-size: 10rem;
+  color: #FFF;
+}
+main #success #success-container #success-button a {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main #success #success-container #success-button a.active {
+  opacity: 1;
+}
+main #error {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  display: none;
+}
+main #error #error-container {
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+main #error #error-container #error-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+main #error #error-container #error-content #error-icon {
+  width: 17.5rem;
+  height: 17.5rem;
+  border-radius: 50%;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #error #error-container #error-content #error-icon i {
+  font-size: 10rem;
+  color: #FFF;
+}
+main #error #error-container #error-button a {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main #error #error-container #error-button a.active {
+  opacity: 1;
+}
+main section#home {
+  background-color: #FFF;
+  background-image: url(../img/home-bg.svg);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+main section#home #home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+main section#home #home-content #home-logo {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#home #home-content #home-logo img {
+  width: 15rem;
+}
+main section#home #home-content #home-title h1 {
+  margin-bottom: 0.5rem;
+}
+main section#home #home-content #home-title h1 b {
+  font-size: 3.75rem;
+  color: #FF6000;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+}
+main section#home #home-content #home-login {
+  width: 100%;
+}
+main section#home #home-content #home-login a {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main section#home #home-content #home-login a.active {
+  opacity: 1;
+}
+main section#home #home-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main section#home #home-button #home-line {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#home #home-button #home-line p {
+  padding: 0 2rem;
+  flex-shrink: 0;
+}
+main section#home #home-button a {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  border: 0.3rem solid #FF6000;
+  background-color: #FFF;
+  color: #141414;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: 0.15rem solid #E0DEF7;
+  border-width: 0.25rem;
+}
+main section#home #home-button a.active {
+  opacity: 1;
+}
+main section#login {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+main section#login #login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main section#login #login-content #login-icon {
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#login #login-content #login-icon i {
+  font-size: 5rem;
+  color: #FFF;
+}
+main section#login #login-content #login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main section#login #login-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+main section#login #login-button button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 0.4;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main section#login #login-button button.active {
+  opacity: 1;
+}
+main section#login #login-button p a {
+  font-weight: 800;
+  color: #141414;
+}
+main section#register {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+main section#register #register-content #register-navigation {
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+main section#register #register-content #register-navigation button {
+  z-index: 1;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 0.4;
+  opacity: 1;
+  border: 0.15rem solid #E0DEF7;
+  background-color: #FFF;
+  color: #999CAD;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: none;
+  background-color: transparent;
+  transition-property: color, background-color;
+  transition: 0.3s ease;
+}
+main section#register #register-content #register-navigation button.active {
+  opacity: 1;
+}
+main section#register #register-content #register-navigation button.active {
+  background-color: #FF6000;
+  color: #FFF;
+}
+main section#register #register-content #register-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main section#register #register-content #register-form .form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+main section#register #register-content #register-form .form-control.business {
+  display: none;
+}
+main section#register #register-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+main section#register #register-button button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 0.4;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main section#register #register-button button.active {
+  opacity: 1;
+}
+main section#register #register-button p a {
+  font-weight: 800;
+  color: #141414;
+}
+main section#customer {
+  position: static;
+  padding-top: 12rem;
+}
+main section#customer.fixed {
+  position: fixed;
+}
+main section#customer.fixed #customer-content {
+  width: 100%;
+  height: 100%;
+}
+main section#customer header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 8.6rem;
+  padding: 2rem;
+  background-color: #FFF;
+  border-bottom: 0.15rem solid #E0DEF7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#customer header #header-menu {
+  cursor: pointer;
+}
+main section#customer header #header-menu i {
+  font-size: 2.75rem;
+  color: #141414;
+}
+main section#customer header #header-button a {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  padding: 1.5rem 4rem;
+}
+main section#customer header #header-button a.active {
+  opacity: 1;
+}
+main section#customer #customer-content article#orders #orders-title {
+  text-align: left;
+  align-items: flex-start;
+}
+main section#customer #customer-content article#orders #orders-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main section#customer #customer-content article#orders #orders-content .order {
+  width: 100%;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-title {
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.5rem 2rem;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-title .order-status {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-title .order-status i {
+  font-size: 2rem;
+  color: #FFF;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-title .order-status p {
+  color: #FFF;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-title .order-price p {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFF;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content {
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 2rem;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-data .order-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-data .order-icon i {
+  color: #FF6000;
+  font-size: 1.8rem;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-data h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-data p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+  margin-bottom: 1rem;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-info p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-features {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-features .order-user {
+  color: #141414;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-features .order-user h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-features .order-user p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-features .order-button {
+  flex-shrink: 0;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-features .order-button button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#orders #orders-content .order .order-content .order-features .order-button button.active {
+  opacity: 1;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content {
+  overflow: hidden;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 2rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe {
+  padding: 2rem;
+  background-color: #FFF;
+  border-radius: 1rem;
+  overflow: scroll;
+  position: static;
+  display: block;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container {
+  height: initial;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title {
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-status {
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  border: 0.25rem solid #FF6000;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-status i {
+  font-size: 2rem;
+  color: #FF6000;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-status h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-date h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-date p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content {
+  overflow: hidden;
+  gap: 1.5rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price .detail-icon, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time .detail-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 0.6rem;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price .detail-icon i, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time .detail-icon i {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price h3, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-name, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-name, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-name .swipe-icon, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-name .swipe-icon, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-name .swipe-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #FF6000;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-name .swipe-icon i, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-name .swipe-icon i, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-name .swipe-icon i {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-name h3, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-name h3, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-name h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data .data-icon, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data .data-icon, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data .data-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data .data-icon i, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data .data-icon i, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data .data-icon i {
+  font-size: 1.8rem;
+  color: #FF6000;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data h4, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data h4, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data p, main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment .comment-rate {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment .comment-rate i {
+  font-size: 1.2rem;
+  color: #FFB700;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content .swipe .swipe-container .swipe-content hr {
+  flex-shrink: 0;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content #swipe-button button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 0.4;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main section#customer #customer-content article#orders #orders-swipe #swipe-content #swipe-button button.active {
+  opacity: 1;
+}
+main section#customer #customer-content article#claims #claims-title {
+  text-align: left;
+  align-items: flex-start;
+}
+main section#customer #customer-content article#claims #claims-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim {
+  width: 100%;
+}
+main section#customer #customer-content article#claims #claims-content .claim.passive .claim-title {
+  background-color: rgba(255, 96, 0, 0.5);
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-title {
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem 2rem;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-title .claim-user {
+  color: #FFF;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-title .claim-user h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-title .claim-user p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-title .claim-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-title .claim-button button {
+  cursor: pointer;
+  background-color: transparent;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 0.2rem solid #FFF;
+  border-radius: 1rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-title .claim-button button i {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content {
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 2rem;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-data .claim-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-data .claim-icon i {
+  color: #FF6000;
+  font-size: 1.8rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-data h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-data p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+  margin-bottom: 1rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-info p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-packets {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-packets .packet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-packets .packet .packet-count {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.6rem;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-packets .packet .packet-count p {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #FFF;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-packets .packet h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-features {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-features .claim-offers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-features .claim-offers i {
+  font-size: 2rem;
+  color: #FF6000;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-features .claim-offers p {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-features .claim-button button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#claims #claims-content .claim .claim-content .claim-features .claim-button button.active {
+  opacity: 1;
+}
+main section#customer #customer-content article#offers #offers-title {
+  text-align: left;
+  align-items: flex-start;
+}
+main section#customer #customer-content article#offers #offers-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main section#customer #customer-content article#offers #offers-content .offer {
+  width: 100%;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-title {
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem 2rem;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-title .offer-company {
+  color: #FFF;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-title .offer-company h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-title .offer-company p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-title .offer-price p {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFF;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content {
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 2rem;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-data .offer-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-data .offer-icon i {
+  color: #FF6000;
+  font-size: 1.8rem;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-data h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-data p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-features {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-features button.offer-detail {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  width: initial;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-features button.offer-detail.active {
+  opacity: 1;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-features .offer-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-features .offer-buttons button {
+  cursor: pointer;
+  background-color: transparent;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 0.2rem solid #FF6000;
+  border-radius: 1rem;
+}
+main section#customer #customer-content article#offers #offers-content .offer .offer-content .offer-features .offer-buttons button i {
+  font-size: 1.8rem;
+  color: #FF6000;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content {
+  overflow: hidden;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 2rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe {
+  padding: 2rem;
+  background-color: #FFF;
+  border-radius: 1rem;
+  overflow: scroll;
+  position: static;
+  display: block;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container {
+  height: initial;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title {
+  gap: 0.5rem;
+  margin-bottom: 0;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-icon i {
+  font-size: 3rem;
+  color: #FFF;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title h2 {
+  font-size: 2rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-rate i {
+  font-size: 1.6rem;
+  color: #FFB700;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-title .swipe-rate p {
+  color: #141414;
+  font-weight: 700;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content {
+  overflow: hidden;
+  gap: 1.5rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price .detail-icon, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time .detail-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 0.6rem;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price .detail-icon i, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time .detail-icon i {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-price h3, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-detail .swipe-time h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-name, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-name, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-name .swipe-icon, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-name .swipe-icon, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-name .swipe-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: #FF6000;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-name .swipe-icon i, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-name .swipe-icon i, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-name .swipe-icon i {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-name h3, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-name h3, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-name h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data .data-icon, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data .data-icon, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data .data-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data .data-icon i, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data .data-icon i, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data .data-icon i {
+  font-size: 1.8rem;
+  color: #FF6000;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data h4, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data h4, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-vehicle .swipe-item .swipe-data p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-driver .swipe-item .swipe-data p, main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-worker .swipe-item .swipe-data p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment .comment-rate {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment .comment-rate i {
+  font-size: 1.2rem;
+  color: #FFB700;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content .swipe-comments .comment p {
+  font-size: 1.4rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content .swipe .swipe-container .swipe-content hr {
+  flex-shrink: 0;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content #swipe-button button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main section#customer #customer-content article#offers #offers-swipe #swipe-content #swipe-button button.active {
+  opacity: 1;
+}
+main section#customer #customer-content article#rating {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 2rem;
+}
+main section#customer #customer-content article#rating #rating-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main section#customer #customer-content article#rating #rating-content #rating-star {
+  text-align: center;
+}
+main section#customer #customer-content article#rating #rating-content #rating-star #star-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+main section#customer #customer-content article#rating #rating-content #rating-star #star-navigation i {
+  font-size: 4rem;
+  color: #FFB700;
+}
+main section#customer #customer-content article#rating #rating-content #rating-star h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#customer #customer-content article#rating #rating-content #rating-comment {
+  width: 100%;
+}
+main section#customer #customer-content article#rating #rating-content #rating-comment textarea {
+  width: 100%;
+  height: 25rem;
+  overflow: scroll;
+  border: none;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  outline: none;
+  resize: none;
+  color: #141414;
+}
+main section#customer #customer-content article#rating #rating-content #rating-comment textarea::-moz-placeholder {
+  color: #999CAD;
+}
+main section#customer #customer-content article#rating #rating-content #rating-comment textarea::placeholder {
+  color: #999CAD;
+}
+main section#customer #customer-content article#rating #rating-button button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 0.4;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main section#customer #customer-content article#rating #rating-button button.active {
+  opacity: 1;
+}
+main section#customer #customer-content article#messages {
+  height: 100%;
+}
+main section#customer #customer-content article#messages #messages-title {
+  text-align: left;
+  align-items: flex-start;
+}
+main section#customer #customer-content article#messages #messages-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  overflow: hidden;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats .chat {
+  cursor: pointer;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats .chat:hover, main section#customer #customer-content article#messages #messages-content #messages-chats .chat.active {
+  background-color: #FF6000;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats .chat:hover .chat-profile, main section#customer #customer-content article#messages #messages-content #messages-chats .chat.active .chat-profile {
+  background-color: #FFF;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats .chat:hover .chat-profile i, main section#customer #customer-content article#messages #messages-content #messages-chats .chat.active .chat-profile i {
+  color: #FF6000;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats .chat:hover .chat-info h2, main section#customer #customer-content article#messages #messages-content #messages-chats .chat:hover .chat-info p, main section#customer #customer-content article#messages #messages-content #messages-chats .chat.active .chat-info h2, main section#customer #customer-content article#messages #messages-content #messages-chats .chat.active .chat-info p {
+  color: #FFF;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats .chat .chat-profile {
+  width: 4.5rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  background-color: #FF6000;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color, color;
+  transition: 0.3s ease;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats .chat .chat-profile i {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats .chat .chat-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats .chat .chat-info h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+  transition: color 0.3s ease;
+}
+main section#customer #customer-content article#messages #messages-content #messages-chats .chat .chat-info p {
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+main section#customer #customer-content article#chat {
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+main section#customer #customer-content article#chat #chat-title {
+  padding: 2rem;
+  border-bottom: 0.15rem solid #E0DEF7;
+}
+main section#customer #customer-content article#chat #chat-title h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#customer #customer-content article#chat #chat-content {
+  overflow: scroll;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main section#customer #customer-content article#chat #chat-content .message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main section#customer #customer-content article#chat #chat-content .message p {
+  width: initial;
+  padding: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #141414;
+}
+main section#customer #customer-content article#chat #chat-content .message span {
+  font-size: 1.2rem;
+}
+main section#customer #customer-content article#chat #chat-content .message.incoming {
+  align-items: flex-start;
+}
+main section#customer #customer-content article#chat #chat-content .message.incoming p {
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
+  background-color: #EFF2F9;
+}
+main section#customer #customer-content article#chat #chat-content .message.outgoing {
+  align-items: flex-end;
+}
+main section#customer #customer-content article#chat #chat-content .message.outgoing p {
+  border-radius: 0.8rem 0 0.8rem 0.8rem;
+  background-color: rgba(255, 146, 81, 0.25);
+}
+main section#customer #customer-content article#chat #chat-send {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 0.15rem solid #E0DEF7;
+  gap: 2rem;
+}
+main section#customer #customer-content article#chat #chat-send textarea {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 1.4rem;
+  color: #141414;
+}
+main section#customer #customer-content article#chat #chat-send textarea::-moz-placeholder {
+  color: #999CAD;
+}
+main section#customer #customer-content article#chat #chat-send textarea::placeholder {
+  color: #999CAD;
+}
+main section#customer #customer-content article#chat #chat-send button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  width: initial;
+}
+main section#customer #customer-content article#chat #chat-send button.active {
+  opacity: 1;
+}
+main section#business {
+  position: static;
+  min-height: 100%;
+  padding-top: 12rem;
+}
+main section#business.fixed {
+  position: fixed;
+}
+main section#business.fixed #business-content {
+  width: 100%;
+  height: 100%;
+}
+main section#business header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 8.6rem;
+  padding: 2rem;
+  background-color: #FFF;
+  border-bottom: 0.15rem solid #E0DEF7;
+  display: flex;
+  align-items: center;
+}
+main section#business header #header-menu {
+  cursor: pointer;
+}
+main section#business header #header-menu i {
+  font-size: 2.75rem;
+  color: #141414;
+}
+main section#business #business-content article#sales #sales-title {
+  text-align: left;
+  align-items: flex-start;
+}
+main section#business #business-content article#sales #sales-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main section#business #business-content article#sales #sales-content .sale {
+  width: 100%;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-title {
+  border-radius: 1rem 1rem 0 0;
+  padding: 1.5rem 2rem;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-title .sale-status {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-title .sale-status i {
+  font-size: 2rem;
+  color: #FFF;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-title .sale-status p {
+  color: #FFF;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-title .sale-price p {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFF;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content {
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 2rem;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-data .sale-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-data .sale-icon i {
+  color: #FF6000;
+  font-size: 1.8rem;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-data h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-data p {
+  font-size: 1.4rem;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+  margin-bottom: 1rem;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-info p {
+  font-size: 1.4rem;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-features {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-features .sale-user {
+  color: #141414;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-features .sale-user h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-features .sale-user p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-features .sale-button button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+}
+main section#business #business-content article#sales #sales-content .sale .sale-content .sale-features .sale-button button.active {
+  opacity: 1;
+}
+main section#business #business-content article#sales #sales-swipe #swipe-content .swipe {
+  display: block;
+}
+main section#business #business-content article#ads #ads-title {
+  text-align: left;
+  align-items: flex-start;
+}
+main section#business #business-content article#ads #ads-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main section#business #business-content article#ads #ads-content .ad {
+  width: 100%;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-title {
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem 2rem;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-title .ad-user {
+  color: #FFF;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-title .ad-user h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-title .ad-user p {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-title .ad-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.8rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-title .ad-button button {
+  cursor: pointer;
+  background-color: transparent;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 0.2rem solid #FFF;
+  border-radius: 1rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-title .ad-button button i {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content {
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 2rem;
+  border-radius: 0 0 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-data .ad-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-data .ad-icon i {
+  color: #FF6000;
+  font-size: 1.8rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-data h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-data p {
+  font-size: 1.4rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-info h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+  margin-bottom: 1rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-info p {
+  font-size: 1.4rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-packets {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-packets .packet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-packets .packet .packet-count {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.6rem;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-packets .packet .packet-count p {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #FFF;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-packets .packet h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-features {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-features .ad-offers {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-features .ad-offers i {
+  font-size: 2rem;
+  color: #FF6000;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-features .ad-offers p {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-features .ad-button button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+}
+main section#business #business-content article#ads #ads-content .ad .ad-content .ad-features .ad-button button.active {
+  opacity: 1;
+}
+main section#business #business-content article#crew #crew-title {
+  text-align: left;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+main section#business #business-content article#crew #crew-title p {
+  margin-bottom: 2rem;
+}
+main section#business #business-content article#crew #crew-title #crew-navigation {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+main section#business #business-content article#crew #crew-title #crew-navigation button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main section#business #business-content article#crew #crew-title #crew-navigation button.active {
+  opacity: 1;
+}
+main section#business #business-content article#crew #crew-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main section#business #business-content article#crew #crew-content .crew-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section#business #business-content article#crew #crew-content .crew-group h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #141414;
+  margin-bottom: 0.5rem;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-title .member-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-title .member-info .member-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 0.6rem;
+  background-color: #FF6000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-title .member-info .member-icon i {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-title .member-info h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-title button {
+  cursor: pointer;
+  background-color: transparent;
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 0.2rem solid #FF6000;
+  border-radius: 1rem;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-title button i {
+  font-size: 1.8rem;
+  color: #FF6000;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-data .data-icon {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-data .data-icon i {
+  color: #FF6000;
+  font-size: 1.8rem;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-data h4 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #141414;
+}
+main section#business #business-content article#crew #crew-content .crew-group .member .member-data p {
+  font-size: 1.4rem;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-content .swipe, main section#business #business-content article#crew #member-swipe #swipe-content .swipe {
+  display: block;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button, main section#business #business-content article#crew #member-swipe #swipe-button button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 0.4;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main section#business #business-content article#crew #vehicle-swipe #swipe-button button.active, main section#business #business-content article#crew #member-swipe #swipe-button button.active {
+  opacity: 1;
+}
+main section#business #business-content article#messages {
+  height: 100%;
+}
+main section#business #business-content article#messages #messages-title {
+  text-align: left;
+  align-items: flex-start;
+}
+main section#business #business-content article#messages #messages-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  overflow: hidden;
+}
+main section#business #business-content article#messages #messages-content #messages-chats {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section#business #business-content article#messages #messages-content #messages-chats .chat {
+  cursor: pointer;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+main section#business #business-content article#messages #messages-content #messages-chats .chat:hover, main section#business #business-content article#messages #messages-content #messages-chats .chat.active {
+  background-color: #FF6000;
+}
+main section#business #business-content article#messages #messages-content #messages-chats .chat:hover .chat-profile, main section#business #business-content article#messages #messages-content #messages-chats .chat.active .chat-profile {
+  background-color: #FFF;
+}
+main section#business #business-content article#messages #messages-content #messages-chats .chat:hover .chat-profile i, main section#business #business-content article#messages #messages-content #messages-chats .chat.active .chat-profile i {
+  color: #FF6000;
+}
+main section#business #business-content article#messages #messages-content #messages-chats .chat:hover .chat-info h2, main section#business #business-content article#messages #messages-content #messages-chats .chat:hover .chat-info p, main section#business #business-content article#messages #messages-content #messages-chats .chat.active .chat-info h2, main section#business #business-content article#messages #messages-content #messages-chats .chat.active .chat-info p {
+  color: #FFF;
+}
+main section#business #business-content article#messages #messages-content #messages-chats .chat .chat-profile {
+  width: 4.5rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  background-color: #FF6000;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: background-color, color;
+  transition: 0.3s ease;
+}
+main section#business #business-content article#messages #messages-content #messages-chats .chat .chat-profile i {
+  font-size: 1.8rem;
+  color: #FFF;
+}
+main section#business #business-content article#messages #messages-content #messages-chats .chat .chat-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+main section#business #business-content article#messages #messages-content #messages-chats .chat .chat-info h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+  transition: color 0.3s ease;
+}
+main section#business #business-content article#messages #messages-content #messages-chats .chat .chat-info p {
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+main section#business #business-content article#chat {
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: #FFF;
+  border-radius: 1rem;
+}
+main section#business #business-content article#chat #chat-title {
+  padding: 2rem;
+  border-bottom: 0.15rem solid #E0DEF7;
+}
+main section#business #business-content article#chat #chat-title h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#business #business-content article#chat #chat-content {
+  overflow: scroll;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+main section#business #business-content article#chat #chat-content .message {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main section#business #business-content article#chat #chat-content .message p {
+  width: initial;
+  padding: 1.6rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #141414;
+}
+main section#business #business-content article#chat #chat-content .message span {
+  font-size: 1.2rem;
+}
+main section#business #business-content article#chat #chat-content .message.incoming {
+  align-items: flex-start;
+}
+main section#business #business-content article#chat #chat-content .message.incoming p {
+  border-radius: 0 0.8rem 0.8rem 0.8rem;
+  background-color: #EFF2F9;
+}
+main section#business #business-content article#chat #chat-content .message.outgoing {
+  align-items: flex-end;
+}
+main section#business #business-content article#chat #chat-content .message.outgoing p {
+  border-radius: 0.8rem 0 0.8rem 0.8rem;
+  background-color: rgba(255, 146, 81, 0.25);
+}
+main section#business #business-content article#chat #chat-send {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 0.15rem solid #E0DEF7;
+  gap: 2rem;
+}
+main section#business #business-content article#chat #chat-send textarea {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 1.4rem;
+  color: #141414;
+}
+main section#business #business-content article#chat #chat-send textarea::-moz-placeholder {
+  color: #999CAD;
+}
+main section#business #business-content article#chat #chat-send textarea::placeholder {
+  color: #999CAD;
+}
+main section#business #business-content article#chat #chat-send button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  width: initial;
+}
+main section#business #business-content article#chat #chat-send button.active {
+  opacity: 1;
+}
+main section#request {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 3rem;
+}
+main section#request #request-situation {
+  overflow: hidden;
+  background-color: #FFF;
+  border-radius: 2rem;
+  padding: 0.3rem;
+}
+main section#request #request-situation #request-progress {
+  width: 0%;
+  height: 0.7rem;
+  border-radius: 2rem;
+  background-color: #FF6000;
+  transition: width 0.75s ease-out;
+}
+main section#request #request-content {
+  position: relative;
+}
+main section#request #request-content .step {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #EFF2F9;
+  display: none;
+}
+main section#request #request-content .step:first-child {
+  display: block;
+}
+main section#request #request-content .step .step-container {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+main section#request #request-content .step .step-container .step-content {
+  position: relative;
+  overflow-y: scroll;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+main section#request #request-content .step .step-container .step-content .step-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 97;
+  width: 100%;
+  height: 100%;
+  background-color: #EFF2F9;
+}
+main section#request #request-content .step .step-container .step-content .step-loading .loading-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#request #request-content .step .step-container .step-content .step-loading .loading-content i {
+  font-size: 3rem;
+  color: #999CAD;
+}
+main section#request #request-content .step .step-container .step-content .option {
+  cursor: pointer;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: #FFF;
+  transition: background-color 0.3s ease;
+}
+main section#request #request-content .step .step-container .step-content .option:hover, main section#request #request-content .step .step-container .step-content .option.active {
+  background-color: #FF6000;
+}
+main section#request #request-content .step .step-container .step-content .option:hover p, main section#request #request-content .step .step-container .step-content .option.active p {
+  color: #FFF;
+}
+main section#request #request-content .step .step-container .step-content .option p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+  transition: color 0.3s ease;
+}
+main section#request #request-content .step#category .step-container .step-content .option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+main section#request #request-content .step#category .step-container .step-content .option:hover .option-icon, main section#request #request-content .step#category .step-container .step-content .option.active .option-icon {
+  background-color: #FFF;
+}
+main section#request #request-content .step#category .step-container .step-content .option:hover .option-icon i, main section#request #request-content .step#category .step-container .step-content .option.active .option-icon i {
+  color: #FF6000;
+}
+main section#request #request-content .step#category .step-container .step-content .option .option-icon {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF6000;
+  transition: background-color 0.3s ease;
+}
+main section#request #request-content .step#category .step-container .step-content .option .option-icon i {
+  font-size: 3rem;
+  color: #FFF;
+  transition: color 0.3s ease;
+}
+main section#request #request-content .step#count .step-container {
+  grid-template-rows: auto 1fr auto;
+}
+main section#request #request-content .step#count .step-container .step-content .option {
+  background-color: transparent;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+main section#request #request-content .step#count .step-container .step-content .option .option-button button {
+  width: 4.6rem;
+  height: 4.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  border: 0.3rem solid #FF6000;
+  background-color: #FFF;
+  color: #141414;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: 0.15rem solid #E0DEF7;
+  color: #999CAD;
+}
+main section#request #request-content .step#count .step-container .step-content .option .option-button button.active {
+  opacity: 1;
+}
+main section#request #request-content .step#count .step-container .step-content .option .option-button button i {
+  font-size: 1.6rem;
+  color: #999CAD;
+}
+main section#request #request-content .step#count .step-container .step-content .option .option-count {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+main section#request #request-content .step#count .step-container .step-content .option .option-count h3 {
+  font-size: 3.25rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#request #request-content .step#count .step-container .step-content .option .option-count h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: #141414;
+}
+main section#request #request-content .step#count .step-container .step-content .option .option-count p {
+  font-size: 1.4rem;
+}
+main section#request #request-content .step#count .step-container .step-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+main section#request #request-content .step#count .step-container .step-info p {
+  font-size: 1.4rem;
+}
+main section#request #request-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+main section#request #request-button button#prev {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+  border: 0.3rem solid #FF6000;
+  background-color: #FFF;
+  color: #141414;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  border: 0.15rem solid #E0DEF7;
+}
+main section#request #request-button button#prev.active {
+  opacity: 1;
+}
+main section#request #request-button button#prev.small {
+  width: initial;
+  padding: 1.5rem 2rem;
+}
+main section#request #request-button button#prev.small i {
+  display: block;
+}
+main section#request #request-button button#prev.small p {
+  display: none;
+}
+main section#request #request-button button#prev i, main section#request #request-button button#prev p {
+  color: #999CAD;
+}
+main section#request #request-button button#prev i {
+  display: none;
+}
+main section#request #request-button button#next {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FF6000;
+  color: #FFF;
+  border: none;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  opacity: 0.4;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+main section#request #request-button button#next.active {
+  opacity: 1;
+}
+
+/*#endregion*/
+/*#region Responsive Codes*/
+@media screen and (min-width: 469px) {
+  main section#customer #customer-content article#orders #orders-swipe, main section#customer #customer-content article#offers #offers-swipe, main section#business #business-content article#sales #sales-swipe, main section#business #business-content article#ads #ads-swipe, main section#business #business-content article#crew #vehicle-swipe, main section#business #business-content article#crew #member-swipe {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  html {
+    font-size: 10px;
+  }
+  section {
+    position: static;
+    max-width: 50rem;
+    height: initial;
+  }
+  main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main #error #error-container {
+    max-width: 50rem;
+    height: initial;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main #success #success-container {
+    max-width: 50rem;
+    height: initial;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  main section#login, main section#register {
+    gap: 3rem;
+  }
+  main section#home {
+    background-color: transparent;
+    background-image: none;
+    border-radius: 1rem;
+    gap: 3rem;
+  }
+  main section#request {
+    height: 84rem;
+  }
+  main section#customer {
+    max-width: 100%;
+    height: 100vh;
+    padding: 12rem 3rem 3rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main section#customer #customer-content {
+    max-width: 100rem;
+    width: 100%;
+    height: 100%;
+  }
+  main section#business {
+    max-width: 100%;
+    height: 100vh;
+    padding: 12rem 3rem 3rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main section#business #business-content {
+    max-width: 100rem;
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  html {
+    font-size: 9.75px;
+  }
+}
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 9.5px;
+  }
+}
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 9.25px;
+  }
+}
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 325px) {
+  html {
+    font-size: 8.75px;
+  }
+}
+/*#endregion*//*# sourceMappingURL=style.css.map */

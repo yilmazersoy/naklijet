@@ -1,0 +1,3274 @@
+$primary: #FF6000;
+$black: #141414;
+$white: #FFF;
+$background: #EFF2F9;
+$text: #999CAD;
+$star: #FFB700;
+$border: 0.15rem solid #E0DEF7;
+
+/*#region Component Codes*/
+
+%text{
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    color: $text;
+}
+
+%title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+
+    h1,h2{
+        font-size: 3rem;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        color: $black;
+        line-height: 130%;
+    }
+
+    p{
+        @extend %text;
+    }
+}
+
+%input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    label{
+        font-size: 1.4rem;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+        color: $black;
+    }
+
+    .form-input{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $white;
+        padding: 1.5rem 2rem;
+        border-radius: 1rem;
+
+        input,textarea,select{
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $black;
+
+            &::placeholder{
+                color: $text;
+            }
+        }
+
+        i{
+            cursor: pointer;
+            font-size: 1.6rem;
+            color: $text;
+        }
+
+        textarea{
+            height: 25rem;
+            resize: none;
+        }
+    }
+}
+
+%box{
+    padding: 2rem;
+    background-color: $white;
+    border-radius: 1rem;
+}
+
+%line{
+    width: 100%;
+    height: 0.1rem;
+    border: none;
+    outline: none;
+    background-color: #E0DEF7;
+}
+
+%aside{
+    z-index: 99;
+    position: fixed;
+    top: 0; left: -100%;
+    height: 100%;
+    width: 30rem;
+    padding: 3rem 2rem;
+    background-color: $white;
+    border-right: $border;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    transition: left 0.5s ease;
+
+    &.active{
+        left: 0;
+    }
+
+    #aside-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5rem;
+
+        #aside-title{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            img{
+                width: 15rem;
+            }
+
+            i{
+                cursor: pointer;
+                font-size: 2rem;
+                color: $text;
+            }
+        }
+
+        #aside-menu{
+            width: 100%;
+
+            nav{
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1.6rem;
+
+                    li{
+                        cursor: pointer;
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 1.2rem;
+                        padding: 1.25rem 1.5rem;
+                        border-radius: 0.8rem;
+                        transition: background-color 0.3s ease;
+                        
+                        &:hover,&.active{
+                            background-color: $primary;
+
+                            p{
+                                color: $white;
+                            }
+
+                            .aside-icon{
+                                i{
+                                    color: $white;
+                                }
+                            }
+
+                            span{
+                                background-color: $white;
+                                color: $primary;
+                            }
+                        }
+
+                        &.hidden{
+                            cursor: default;
+                        }
+
+                        .aside-icon{
+                            width: 2.25rem;
+                            height: 2rem;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            i{
+                                font-size: 2.25rem;
+                                color: $text;
+                                transition: color 0.3s ease;
+                            }
+                        }
+
+                        p{
+                            @extend %text;
+                            transition: color 0.3s ease;
+                        }
+
+                        span{
+                            display: inline-block;
+                            padding: 0.4rem 0.8rem;
+                            border-radius: 0.4rem;
+                            background-color: $primary;
+                            font-size: 1.1rem;
+                            font-weight: 800;
+                            color: $white;
+                            transition-property: background-color,color;
+                            transition: 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #aside-logout{
+        cursor: pointer;
+        width: 100%;
+        padding: 1.25rem 1.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.2rem;
+
+        #logout-icon{
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i{
+                font-size: 2.25rem;
+                color: $text;
+            }
+
+        }
+
+        p{
+            @extend %text;
+        }
+    }
+}
+
+@mixin button($isChecked: false, $type: primary, $small: false){
+    cursor: pointer;
+    width: 100%;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $primary;
+    color: $white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    
+    @if $isChecked{
+        opacity: 0.4;
+    }
+
+    @if $type == secondary{
+        opacity: 1;
+        border: 0.3rem solid $primary;
+        background-color: $white;
+        color: $black;
+    }
+    @else if $type == soft{
+        opacity: 1;
+        border: $border;
+        background-color: $white;
+        color: $text;
+    }
+    
+    @if $small{
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+    @else{
+        padding: 1.5rem;
+        font-size: 1.6rem;
+    }
+
+    &.active{
+        opacity: 1;
+    }
+}
+
+%swipe{
+    z-index: 98;
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    background-color: $background;
+    width: 100%;
+    max-width: 70rem;
+    height: 75vh;
+    border-top: $border;
+    padding: 3rem 3rem 2rem 3rem;
+    border-radius: 2rem 2rem 0 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 2rem;
+    transition: bottom 0.5s ease;
+
+    &.active{
+        bottom: 0;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6rem;
+        height: 0.6rem;
+        background-color: #E5E6EB;
+        border-radius: 2rem;
+    }
+
+    #swipe-content{
+        position: relative;
+
+        .swipe-loading{
+            position: absolute;
+            top: 0; left: 0;
+            z-index: 97;
+            width: 100%;
+            height: 100%;
+            background-color: $background;
+
+            .loading-content{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i{
+                    font-size: 3rem;
+                    color: $text;
+                }
+            }
+        }
+
+        .swipe{
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $background;
+            display: none;
+
+            &#vehicle{
+                display: block;
+            }
+
+            .swipe-container{
+                overflow: hidden;
+                height: 100%;
+                display: grid;
+                grid-template-rows: auto 1fr;
+
+                .swipe-title{
+                    @extend %title;
+
+                    .swipe-icon{
+                        margin-top: 0.5rem;
+                        width: 8rem;
+                        height: 8rem;
+                        background-color: $primary;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        i{
+                            font-size: 3rem;
+                            color: $white;
+                        }
+                    }
+                }
+    
+                .swipe-content{
+                    overflow: auto;
+                    overflow-y: scroll;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+    
+                    .swipe-option{
+                        cursor: pointer;
+                        width: 100%;
+                        padding: 2rem;
+                        border-radius: 1rem;
+                        background-color: $white;
+                        transition: background-color 0.3s ease;
+    
+                        &.active{
+                            background-color: $primary;
+    
+                            p{
+                                color: $white;
+                            }
+                        }
+                        
+                        p{
+                            font-size: 1.6rem;
+                            font-weight: 700;
+                            font-family: 'Montserrat', sans-serif;
+                            color: $black;
+                            transition: color 0.3s ease;
+                        }
+                    }
+
+                    .form-control{
+                        @extend %input;
+                    }
+                }
+            }
+        }
+    }
+
+    #swipe-button{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+
+        button{
+            &#prev{
+                @include button(false, secondary, false);
+                border: $border;
+
+                &.small{
+                    width: initial;
+                    padding: 1.5rem 2rem;
+
+                    i{
+                        display: block;
+                    }
+                    p{
+                        display: none;
+                    }
+                }
+                
+                i,p{
+                    color: $text;
+                }
+
+                i{
+                    display: none;
+                }
+            }
+
+            &#next{
+                @include button(true, primary, false);
+            }
+        }
+    }
+}
+
+/*#endregion*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+}
+
+html{
+    font-size: 10px;
+}
+
+body{
+    background-color: $background;
+}
+
+section{
+    padding: 3rem;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*#region Main Codes*/
+
+main{
+
+    /*#region Popups*/
+
+    #overlay{
+        z-index: 97;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255,0.75);
+        display: none;
+    }
+
+    #loading{
+        z-index: 99;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        display: none;
+        
+        #loading-content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            img{
+                width: 15rem;
+            }
+    
+            i{
+                font-size: 3rem;
+                color: $text;
+            }
+        }
+    }
+
+    #success{
+        z-index: 100;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        display: none;
+
+        #success-container{
+            padding: 3rem;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 1fr auto;
+
+            #success-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+
+                #success-icon{
+                    width: 17.5rem;
+                    height: 17.5rem;
+                    border-radius: 50%;
+                    background-color: $primary;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    i{
+                        font-size: 10rem;
+                        color: $white;
+                    }
+                }
+                #success-title{
+                    @extend %title;
+                }
+            }
+            #success-button{
+                a{
+                    @include button(false, primary, false);
+                }
+            }
+        }
+    }
+
+    #error{
+        z-index: 100;
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+        display: none;
+
+        #error-container{
+            padding: 3rem;
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-rows: 1fr auto;
+
+            #error-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+
+                #error-icon{
+                    width: 17.5rem;
+                    height: 17.5rem;
+                    border-radius: 50%;
+                    background-color: $primary;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    i{
+                        font-size: 10rem;
+                        color: $white;
+                    }
+                }
+                #error-title{
+                    @extend %title;
+                }
+            }
+
+            #error-button{
+                a{
+                    @include button(false, primary, false);
+                }
+            }
+        }
+    }
+    
+    aside{
+        @extend %aside;
+    }
+
+    /*#endregion*/
+
+    section#home{
+        background-color: $white;
+        background-image: url(../img/home-bg.svg);
+        background-size: cover;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        
+
+        #home-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            #home-logo{
+                width: 20rem;
+                height: 20rem;
+                border-radius: 50%;
+                background-color: $white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                img{
+                    width: 15rem;
+                }
+            }
+
+            #home-title{
+                @extend %title;
+
+                h1{
+                    margin-bottom: 0.5rem;
+
+                    b{
+                        font-size: 3.75rem;
+                        color: $primary;
+                        font-weight: 800;
+                        font-family: 'Montserrat', sans-serif;
+                        font-style: italic;
+                    }
+                }
+            }
+
+            #home-login{
+                width: 100%;
+
+                a{
+                    @include button(false, primary, false);
+                }
+            }
+        }
+
+        #home-button{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            #home-line{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                hr{
+                    @extend %line;
+                }
+
+                p{
+                    @extend %text;
+                    padding: 0 2rem;
+                    flex-shrink: 0;
+                }
+            }
+
+            a{
+                @include button(false, secondary, false);
+                border: $border;
+                border-width: 0.25rem;
+            }
+        }
+    }
+
+    section#login{
+        display: grid;
+        grid-template-rows: 1fr auto;
+
+        #login-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+
+            #login-icon{
+                width: 12.5rem;
+                height: 12.5rem;
+                border-radius: 50%;
+                background-color: $primary;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                i{
+                    font-size: 5rem;
+                    color: $white;
+                }
+            }
+
+            #login-title{
+                @extend %title;
+            }
+
+            #login-form{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .form-control{
+                    @extend %input;
+                }
+            }
+        }
+
+        #login-button{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+
+            button{
+                @include button(true, primary, false);
+            }
+
+            p{
+                @extend %text;
+
+                a{
+                    font-weight: 800;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    section#register{
+        display: grid;
+        grid-template-rows: 1fr auto;
+
+        #register-content{
+            #register-navigation{
+                overflow: hidden;
+                position: relative;
+                @extend %box;
+                padding: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 3rem;
+                
+                button{
+                    z-index: 1;
+                    @include button(true, soft, false);
+                    border: none;
+                    background-color: transparent;
+                    transition-property: color, background-color;
+                    transition: 0.3s ease;
+
+                    &.active{
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+
+            #register-title{
+                @extend %title;
+            }
+
+            #register-form{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .form-row{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 2rem;
+                }
+                
+                .form-control{
+                    @extend %input;
+
+                    &.business{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        #register-button{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1.5rem;
+
+            button{
+                @include button(true, primary, false);
+            }
+
+            p{
+                @extend %text;
+
+                a{
+                    font-weight: 800;
+                    color: $black;
+                }
+            }
+        }
+    }
+    
+    section#customer{
+        position: static;
+        padding-top: 12rem;
+        
+        &.fixed{
+            position: fixed;
+
+            #customer-content{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        header{
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            min-height: 8.6rem;
+            padding: 2rem;
+            background-color: $white;
+            border-bottom: $border;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            #header-menu{
+                cursor: pointer;
+
+                i{
+                    font-size: 2.75rem;
+                    color: $black;
+                }
+            }
+
+            #header-button{
+                a{
+                    @include button(false, primary, false);
+                    padding: 1.5rem 4rem;
+                }
+            }
+        }
+        #customer-content{
+            article#orders{
+                #orders-title{
+                    @extend %title;
+                    text-align: left;
+                    align-items: flex-start;
+                }
+                #orders-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+
+                    .order{  
+                        width: 100%;
+
+                        .order-title{
+                            border-radius: 1rem 1rem 0 0;
+                            padding: 1.5rem 2rem;
+                            background-color: $primary;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .order-status{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 1rem;
+
+                                i{
+                                    font-size: 2rem;
+                                    color: $white;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    color: $white;
+                                }
+                            }
+
+                            .order-price{
+                                p{
+                                    font-size: 2rem;
+                                    font-weight: 800;
+                                    color: $white;
+                                }
+                            }
+                        }
+
+                        .order-content{
+                            overflow: hidden;
+                            background-color: $white;
+                            padding: 2rem;
+                            border-radius: 0 0 1rem 1rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1.5rem;
+
+                            .order-data{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0.6rem;
+
+                                .order-icon{
+                                    width: 2.25rem;
+                                    height: 2.25rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    i{
+                                        color: $primary;
+                                        font-size: 1.8rem;
+                                    }
+                                }
+
+                                h4{
+                                    font-size: 1.4rem;
+                                    font-weight: 800;
+                                    color: $black;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                }
+                                
+                            }
+
+                            .order-info{
+                                h3{
+                                    font-size: 1.8rem;
+                                    font-weight: 700;
+                                    font-family: 'Montserrat', sans-serif;
+                                    color: $black;
+                                    margin-bottom: 1rem;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                }
+                            }
+
+                            .order-features{
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .order-user{
+                                    color: $black;
+
+                                    h2{
+                                        font-size: 1.8rem;
+                                        font-weight: 800;
+                                        margin-bottom: 0.25rem;
+                                    }
+
+                                    p{
+                                        font-size: 1.4rem;
+                                        font-weight: 600;
+                                    }
+                                }
+
+                                .order-button{
+                                    flex-shrink: 0;
+                                    button{
+                                        @include button(false, primary, true);
+                                    }
+                                }
+                            }
+
+                            hr{
+                                @extend %line;
+                            }
+                        }
+                    }
+                }
+                #orders-swipe{
+                    @extend %swipe;
+
+                    #swipe-content{
+                        overflow: hidden;
+                        height: 100%;
+                        display: grid;
+                        grid-template-rows: 1fr auto;
+                        gap: 2rem;
+
+                        .swipe{
+                            padding: 2rem;
+                            background-color: $white;
+                            border-radius: 1rem;
+                            overflow: scroll;
+                            position: static;
+                            display: block;
+
+                            .swipe-container{
+                                height: initial;
+                                overflow: scroll;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1.5rem;
+
+                                .swipe-title{
+                                    gap: 0.5rem;
+                                    margin-bottom: 0;
+
+                                    .swipe-status{
+                                        padding: 1.5rem 2rem;
+                                        border-radius: 1rem;
+                                        border: 0.25rem solid $primary;
+                                        margin-bottom: 1rem;
+                                        display: flex;
+                                        flex-direction: column;
+                                        align-items: center;
+                                        gap: 1rem;
+
+                                        i{
+                                            font-size: 2rem;
+                                            color: $primary;
+                                        }
+
+                                        h2{
+                                            font-size: 1.6rem;
+                                            font-weight: 700;
+                                            font-family: "Montserrat", sans-serif;
+                                            color: $black;
+                                        }
+                                    }
+                                    
+
+                                    .swipe-date{
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 0.6rem;
+
+                                        h4{
+                                            font-size: 1.4rem;
+                                            font-weight: 800;
+                                            color: $black;
+                                        }
+
+                                        p{
+                                            @extend %text;
+                                            font-size: 1.4rem;
+                                        }
+                                    }
+                                }
+
+                                .swipe-content{
+                                    overflow: hidden;
+                                    gap: 1.5rem;
+
+                                    .swipe-detail{
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: space-around;
+                                        align-items: center;
+
+                                        .swipe-price,.swipe-time{
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            gap: 0.2rem;
+
+                                            .detail-icon{
+                                                width: 4.5rem;
+                                                height: 4.5rem;
+                                                border-radius: 0.6rem;
+                                                background-color: $primary;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                margin-bottom: 0.8rem;
+            
+                                                i{
+                                                    font-size: 1.8rem;
+                                                    color: $white;
+                                                }
+                                            }
+
+                                            p{
+                                                @extend %text;
+                                                font-size: 1.4rem;
+                                            }
+
+                                            h3{
+                                                font-size: 1.6rem;
+                                                font-weight: 700;
+                                                font-family: "Montserrat", sans-serif;
+                                                color: $black;
+                                            }
+                                        }
+                                    }
+                                    
+                                    .swipe-vehicle,.swipe-driver,.swipe-worker{
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 1rem;
+
+                                        .swipe-item{
+                                            display: flex;
+                                            flex-direction: column;
+                                            gap: 1rem;
+
+                                            .swipe-name{
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                align-items: center;
+                                                gap: 1rem;
+
+                                                .swipe-icon{
+                                                    width: 4.5rem;
+                                                    height: 4.5rem;
+                                                    background-color: $primary;
+                                                    border-radius: 0.6rem;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+
+                                                    i{
+                                                        font-size: 1.8rem;
+                                                        color: $white;
+                                                    }
+                                                }
+
+                                                h3{
+                                                    font-size: 1.6rem;
+                                                    font-weight: 700;
+                                                    font-family: "Montserrat", sans-serif;
+                                                    color: $black;
+                                                }
+                                            }
+
+                                            .swipe-data{
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                align-items: center;
+                                                gap: 0.6rem;
+                                                
+                                                .data-icon{
+                                                    width: 2.25rem;
+                                                    height: 2.25rem;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+
+                                                    i{
+                                                        font-size: 1.8rem;
+                                                        color: $primary
+                                                    }
+                                                }
+
+                                                h4{
+                                                    font-size: 1.4rem;
+                                                    font-weight: 800;
+                                                    color: $black;
+                                                }
+
+                                                p{
+                                                    @extend %text;
+                                                    font-size: 1.4rem;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .swipe-comments{
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 1rem;
+
+                                        .comment{
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: flex-start;
+                                            gap: 0.5rem;
+
+                                            .comment-rate{
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                align-items: center;
+                                                gap: 0.25rem;
+                                                margin-bottom: 0.25rem;
+
+                                                i{
+                                                    font-size: 1.2rem;
+                                                    color: $star;
+                                                }
+
+                                            }
+
+                                            h3{
+                                                font-size: 1.6rem;
+                                                font-weight: 700;
+                                                font-family: "Montserrat", sans-serif;
+                                                color: $black;
+                                            }
+
+                                            p{
+                                                @extend %text;
+                                                font-size: 1.4rem;
+                                            }
+                                        }
+                                    }
+
+                                    hr{
+                                        @extend %line;
+                                        flex-shrink: 0;
+                                    }
+                                }
+
+                                hr{
+                                    @extend %line;
+                                }
+                            }    
+                        }
+
+                        #swipe-button{
+                            button{
+                                @include button(true, primary, false);
+                            }
+                        }
+                    }
+                }
+            }
+
+            article#claims{
+                #claims-title{
+                    @extend %title;
+                    text-align: left;
+                    align-items: flex-start;
+                }
+                #claims-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+
+                    .claim{  
+                        width: 100%;
+
+                        &.passive{
+                            .claim-title{
+                                background-color: rgba(255, 96, 0, 0.5);
+                            }
+                        }
+
+                        .claim-title{
+                            border-radius: 1rem 1rem 0 0;
+                            padding: 1rem 2rem;
+                            background-color: $primary;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .claim-user{
+                                color: $white;
+
+                                h2{
+                                    font-size: 1.8rem;
+                                    font-weight: 800;
+                                    margin-bottom: 0.25rem;
+                                }
+
+                                p{
+                                    font-size: 1.4rem;
+                                    font-weight: 600;
+                                }
+                            }
+
+                            .claim-button{
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                gap: 0.8rem;
+
+                                button{
+                                    cursor: pointer;
+                                    background-color: transparent;
+                                    width: 4.5rem;
+                                    height: 4.5rem;
+                                    border: 0.2rem solid $white;
+                                    border-radius: 1rem;
+
+                                    i{
+                                        font-size: 1.8rem;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .claim-content{
+                            overflow: hidden;
+                            background-color: $white;
+                            padding: 2rem;
+                            border-radius: 0 0 1rem 1rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1.5rem;
+
+                            .claim-data{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0.6rem;
+
+                                .claim-icon{
+                                    width: 2.25rem;
+                                    height: 2.25rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    i{
+                                        color: $primary;
+                                        font-size: 1.8rem;
+                                    }
+                                }
+
+                                h4{
+                                    font-size: 1.4rem;
+                                    font-weight: 800;
+                                    color: $black;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                }
+                            }
+
+                            .claim-info{
+                                h3{
+                                    font-size: 1.8rem;
+                                    font-weight: 700;
+                                    font-family: 'Montserrat', sans-serif;
+                                    color: $black;
+                                    margin-bottom: 1rem;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                }
+                            }
+
+                            .claim-packets{
+                                width: 100%;
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                align-items: center;
+
+                                .packet{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    text-align: center;
+                                    gap: 1rem;
+
+                                    .packet-count{
+                                        width: 4rem;
+                                        height: 4rem;
+                                        border-radius: 0.6rem;
+                                        background-color: $primary;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        p{
+                                            font-size: 1.8rem;
+                                            font-weight: 800;
+                                            color: $white;
+                                        }
+
+                                    }
+
+                                    h4{
+                                        font-size: 1.4rem;
+                                        font-weight: 800;
+                                        color: $black;
+                                    }
+                                }
+                            }
+
+                            .claim-features{
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .claim-offers{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 1rem;
+
+                                    i{
+                                        font-size: 2rem;
+                                        color: $primary;
+                                    }
+
+                                    p{
+                                        font-size: 1.6rem;
+                                        font-weight: 800;
+                                        color: $black; 
+                                    }
+                                }
+
+                                .claim-button{
+                                    button{
+                                        @include button(false, primary, true);
+                                    }
+                                }
+                            }
+
+                            hr{
+                                @extend %line;
+                            }
+                        }
+                    }
+                }
+            }
+
+            article#offers{
+                #offers-title{
+                    @extend %title;
+                    text-align: left;
+                    align-items: flex-start;
+                }
+                #offers-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+
+                    .offer{  
+                        width: 100%;
+
+                        .offer-title{
+                            border-radius: 1rem 1rem 0 0;
+                            padding: 1rem 2rem;
+                            background-color: $primary;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .offer-company{
+                                color: $white;
+
+                                h2{
+                                    font-size: 1.8rem;
+                                    font-weight: 800;
+                                    margin-bottom: 0.25rem;
+                                }
+
+                                p{
+                                    font-size: 1.4rem;
+                                    font-weight: 600;
+                                }
+                            }
+
+                            .offer-price{
+                                p{
+                                    font-size: 2rem;
+                                    font-weight: 800;
+                                    color: $white;
+                                }
+                            }
+                        }
+
+                        .offer-content{
+                            overflow: hidden;
+                            background-color: $white;
+                            padding: 2rem;
+                            border-radius: 0 0 1rem 1rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1.5rem;
+
+                            .offer-data{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0.6rem;
+
+                                .offer-icon{
+                                    width: 2.25rem;
+                                    height: 2.25rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    i{
+                                        color: $primary;
+                                        font-size: 1.8rem;
+                                    }
+                                }
+
+                                h4{
+                                    font-size: 1.4rem;
+                                    font-weight: 800;
+                                    color: $black;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                }
+                                
+                            }
+
+                            .offer-features{
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                button.offer-detail{
+                                    @include button(false, primary, true);
+                                    width: initial;
+                                }
+
+                                .offer-buttons{
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    gap: 0.8rem;
+    
+                                    button{
+                                        cursor: pointer;
+                                        background-color: transparent;
+                                        width: 4.5rem;
+                                        height: 4.5rem;
+                                        border: 0.2rem solid $primary;
+                                        border-radius: 1rem;
+    
+                                        i{
+                                            font-size: 1.8rem;
+                                            color: $primary;
+                                        }
+                                    }
+                                }
+                            }
+
+                            hr{
+                                @extend %line;
+                            }
+                        }
+                    }
+                }
+
+                #offers-swipe{
+                    @extend %swipe;
+
+                    #swipe-content{
+                        overflow: hidden;
+                        height: 100%;
+                        display: grid;
+                        grid-template-rows: 1fr auto;
+                        gap: 2rem;
+
+                        .swipe{
+                            padding: 2rem;
+                            background-color: $white;
+                            border-radius: 1rem;
+                            overflow: scroll;
+                            position: static;
+                            display: block;
+
+                            .swipe-container{
+                                height: initial;
+                                overflow: scroll;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1.5rem;
+
+                                .swipe-title{
+                                    gap: 0.5rem;
+                                    margin-bottom: 0;
+
+                                    .swipe-icon{
+                                        width: 8rem;
+                                        height: 8rem;
+                                        border-radius: 50%;
+                                        background-color: $primary;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        margin-bottom: 1rem;
+    
+                                        i{
+                                            font-size: 3rem;
+                                            color: $white;
+                                        }
+                                    }
+                                    
+                                    h2{
+                                        font-size: 2rem;
+                                    }
+
+                                    .swipe-rate{
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 0.5rem;
+
+                                        i{
+                                            font-size: 1.6rem;
+                                            color: $star;
+                                        }
+
+                                        p{
+                                            color: $black;
+                                            font-weight: 700;
+                                        }
+                                    }
+                                }
+
+                                .swipe-content{
+                                    overflow: hidden;
+                                    gap: 1.5rem;
+
+                                    .swipe-detail{
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: space-around;
+                                        align-items: center;
+
+                                        .swipe-price,.swipe-time{
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            gap: 0.2rem;
+
+                                            .detail-icon{
+                                                width: 4.5rem;
+                                                height: 4.5rem;
+                                                border-radius: 0.6rem;
+                                                background-color: $primary;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                margin-bottom: 0.8rem;
+            
+                                                i{
+                                                    font-size: 1.8rem;
+                                                    color: $white;
+                                                }
+                                            }
+
+                                            p{
+                                                @extend %text;
+                                                font-size: 1.4rem;
+                                            }
+
+                                            h3{
+                                                font-size: 1.6rem;
+                                                font-weight: 700;
+                                                font-family: "Montserrat", sans-serif;
+                                                color: $black;
+                                            }
+                                        }
+                                    }
+                                    
+                                    .swipe-vehicle,.swipe-driver,.swipe-worker{
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 1rem;
+
+                                        .swipe-item{
+                                            display: flex;
+                                            flex-direction: column;
+                                            gap: 1rem;
+
+                                            .swipe-name{
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                align-items: center;
+                                                gap: 1rem;
+
+                                                .swipe-icon{
+                                                    width: 4.5rem;
+                                                    height: 4.5rem;
+                                                    background-color: $primary;
+                                                    border-radius: 0.6rem;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+
+                                                    i{
+                                                        font-size: 1.8rem;
+                                                        color: $white;
+                                                    }
+                                                }
+
+                                                h3{
+                                                    font-size: 1.6rem;
+                                                    font-weight: 700;
+                                                    font-family: "Montserrat", sans-serif;
+                                                    color: $black;
+                                                }
+                                            }
+
+                                            .swipe-data{
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                align-items: center;
+                                                gap: 0.6rem;
+                                                
+                                                .data-icon{
+                                                    width: 2.25rem;
+                                                    height: 2.25rem;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+
+                                                    i{
+                                                        font-size: 1.8rem;
+                                                        color: $primary
+                                                    }
+                                                }
+
+                                                h4{
+                                                    font-size: 1.4rem;
+                                                    font-weight: 800;
+                                                    color: $black;
+                                                }
+
+                                                p{
+                                                    @extend %text;
+                                                    font-size: 1.4rem;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    .swipe-comments{
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: 1rem;
+
+                                        .comment{
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: flex-start;
+                                            gap: 0.5rem;
+
+                                            .comment-rate{
+                                                display: flex;
+                                                justify-content: flex-start;
+                                                align-items: center;
+                                                gap: 0.25rem;
+                                                margin-bottom: 0.25rem;
+
+                                                i{
+                                                    font-size: 1.2rem;
+                                                    color: $star;
+                                                }
+
+                                            }
+
+                                            h3{
+                                                font-size: 1.6rem;
+                                                font-weight: 700;
+                                                font-family: "Montserrat", sans-serif;
+                                                color: $black;
+                                            }
+
+                                            p{
+                                                @extend %text;
+                                                font-size: 1.4rem;
+                                            }
+                                        }
+                                    }
+
+                                    hr{
+                                        @extend %line;
+                                        flex-shrink: 0;
+                                    }
+                                }
+                            }    
+                        }
+
+                        #swipe-button{
+                            button{
+                                @include button(false, primary, false);
+                            }
+                        }
+                    }
+                }
+            }
+
+            article#rating{
+                height: 100%;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                gap: 2rem;
+
+                #rating-title{
+                    @extend %title;
+                }
+
+                #rating-content{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+
+                    #rating-star{
+                        text-align: center;
+                        
+                        #star-navigation{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 1rem;
+                            margin-bottom: 1.5rem;
+
+                            i{
+                                font-size: 4rem;
+                                color: $star;
+                            }
+                        }
+
+                        h2{
+                            font-size: 3rem;
+                            font-weight: 700;
+                            font-family: 'Montserrat', sans-serif;
+                            color: $black;
+                        }
+                    }
+
+                    #rating-comment{
+                        width: 100%;
+
+                        textarea{
+                            width: 100%;
+                            height: 25rem;
+                            overflow: scroll;
+                            border: none;
+                            border-radius: 1rem;
+                            padding: 1.5rem 2rem;
+                            outline: none;
+                            resize: none;
+                            @extend %text;
+                            color: $black;
+    
+                            &::placeholder{
+                                color: $text;
+                            }
+                        }
+                    }
+                }
+
+                #rating-button{
+                    button{
+                        @include button(true, primary, false);
+                    }
+                }
+            }
+
+            article#messages{
+                height: 100%;
+
+                #messages-title{
+                    @extend %title;
+                    text-align: left;
+                    align-items: flex-start;
+                }
+
+                #messages-content{
+                    @extend %box;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+                    overflow: hidden;
+
+                    #messages-chats{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .chat{
+                            cursor: pointer;
+                            width: 100%;
+                            padding: 2rem;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 1.5rem;
+                            transition: background-color 0.3s ease;
+
+                            &:hover,&.active{
+                                background-color: $primary;
+
+                                .chat-profile{
+                                    background-color: $white;
+                                    
+                                    i{
+                                        color: $primary;
+                                    }
+                                }
+
+                                .chat-info{
+                                    h2,p{
+                                        color: $white;
+                                    }
+                                }
+                            }
+
+                            .chat-profile{
+                                width: 4.5rem;
+                                height: 4.5rem;
+                                flex-shrink: 0;
+                                background-color: $primary;
+                                border-radius: 1rem;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                transition-property: background-color,color;
+                                transition: 0.3s ease;
+
+                                i{
+                                    font-size: 1.8rem;
+                                    color: $white;
+                                }
+                            }
+
+                            .chat-info{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                gap: 0.4rem;
+
+                                h2{
+                                    font-size: 1.6rem;
+                                    font-weight: 600;
+                                    font-family: 'Montserrat', sans-serif;
+                                    color: $black;
+                                    transition: color 0.3s ease;
+                                }
+    
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                    transition: color 0.3s ease;
+                                }
+                            }
+                        }
+
+                        hr{
+                            @extend %line;
+                        }
+                    }
+                }
+            }
+
+            article#chat{
+                width: inherit;
+                height: inherit;
+                overflow: hidden;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                background-color: $white;
+                border-radius: 1rem;
+
+                #chat-title{
+                    padding: 2rem;
+                    border-bottom: $border;
+
+                    h1{
+                        font-size: 2rem;
+                        font-weight: 600;
+                        font-family: 'Montserrat', sans-serif;
+                        color: $black;
+                    }
+                }
+
+                #chat-content{
+                    overflow: scroll;
+                    padding: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+
+                    .message{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.8rem;
+                        
+                        p{
+                            width: initial;
+                            padding: 1.6rem;
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            line-height: 1.6;
+                            color: $black;
+                        }
+                        
+                        span{
+                            @extend %text;
+                            font-size: 1.2rem;
+                        }
+                        
+                        &.incoming{
+                            align-items: flex-start;
+                            
+                            p{
+                                border-radius: 0 0.8rem 0.8rem 0.8rem;
+                                background-color: $background;
+                            }
+                        }
+
+                        &.outgoing{
+                            align-items: flex-end;
+                            
+                            p{
+                                border-radius: 0.8rem 0 0.8rem 0.8rem;
+                                background-color: rgba(255, 146, 81, 0.25);
+                            }
+                        }
+                    }
+                }
+
+                #chat-send{
+                    padding: 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    border-top: $border;
+                    gap: 2rem;
+
+                    textarea{
+                        width: 100%;
+                        height: 100%;
+                        overflow: scroll;
+                        border: none;
+                        outline: none;
+                        resize: none;
+                        @extend %text;
+                        font-size: 1.4rem;
+                        color: $black;
+
+                        &::placeholder{
+                            color: $text;
+                        }
+                    }
+
+                    button{
+                        @include button(false, primary, true);
+                        width: initial;
+                    }
+                }
+            }
+        }
+    }
+
+    section#business{
+        position: static;
+        min-height: 100%;
+        padding-top: 12rem;
+
+        &.fixed{
+            position: fixed;
+
+            #business-content{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        header{
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            min-height: 8.6rem;
+            padding: 2rem;
+            background-color: $white;
+            border-bottom: $border;
+            display: flex;
+            align-items: center;
+
+            #header-menu{
+                cursor: pointer;
+
+                i{
+                    font-size: 2.75rem;
+                    color: $black;
+                }
+            }
+        }
+
+        #business-content{
+            article#sales{
+                #sales-title{
+                    @extend %title;
+                    text-align: left;
+                    align-items: flex-start;
+                }
+                #sales-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+
+                    .sale{  
+                        width: 100%;
+
+                        .sale-title{
+                            border-radius: 1rem 1rem 0 0;
+                            padding: 1.5rem 2rem;
+                            background-color: $primary;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .sale-status{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 1rem;
+
+                                i{
+                                    font-size: 2rem;
+                                    color: $white;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    color: $white;
+                                }
+                            }
+
+                            .sale-price{
+                                p{
+                                    font-size: 2rem;
+                                    font-weight: 800;
+                                    color: $white;
+                                }
+                            }
+                        }
+
+                        .sale-content{
+                            overflow: hidden;
+                            background-color: $white;
+                            padding: 2rem;
+                            border-radius: 0 0 1rem 1rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1.5rem;
+
+                            .sale-data{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0.6rem;
+
+                                .sale-icon{
+                                    width: 2.25rem;
+                                    height: 2.25rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    i{
+                                        color: $primary;
+                                        font-size: 1.8rem;
+                                    }
+                                }
+
+                                h4{
+                                    font-size: 1.4rem;
+                                    font-weight: 800;
+                                    color: $black;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                }
+                                
+                            }
+
+                            .sale-info{
+                                h3{
+                                    font-size: 1.8rem;
+                                    font-weight: 700;
+                                    font-family: 'Montserrat', sans-serif;
+                                    color: $black;
+                                    margin-bottom: 1rem;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                }
+                            }
+
+                            .sale-features{
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .sale-user{
+                                    color: $black;
+
+                                    h2{
+                                        font-size: 1.8rem;
+                                        font-weight: 800;
+                                        margin-bottom: 0.25rem;
+                                    }
+
+                                    p{
+                                        font-size: 1.4rem;
+                                        font-weight: 600;
+                                    }
+                                }
+
+                                .sale-button{
+                                    button{
+                                        @include button(false, primary, true);
+                                    }
+                                }
+                            }
+
+                            hr{
+                                @extend %line;
+                            }
+                        }
+                    }
+                }
+                #sales-swipe{
+                    @extend %swipe;
+
+                    #swipe-content{
+                        .swipe{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            
+            article#ads{
+                #ads-title{
+                    @extend %title;
+                    text-align: left;
+                    align-items: flex-start;
+                }
+                #ads-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+
+                    .ad{  
+                        width: 100%;
+
+                        .ad-title{
+                            border-radius: 1rem 1rem 0 0;
+                            padding: 1rem 2rem;
+                            background-color: $primary;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            .ad-user{
+                                color: $white;
+
+                                h2{
+                                    font-size: 1.8rem;
+                                    font-weight: 800;
+                                    margin-bottom: 0.25rem;
+                                }
+
+                                p{
+                                    font-size: 1.4rem;
+                                    font-weight: 600;
+                                }
+                            }
+
+                            .ad-button{
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                gap: 0.8rem;
+
+                                button{
+                                    cursor: pointer;
+                                    background-color: transparent;
+                                    width: 4.5rem;
+                                    height: 4.5rem;
+                                    border: 0.2rem solid $white;
+                                    border-radius: 1rem;
+
+                                    i{
+                                        font-size: 1.8rem;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                        }
+
+                        .ad-content{
+                            overflow: hidden;
+                            background-color: $white;
+                            padding: 2rem;
+                            border-radius: 0 0 1rem 1rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1.5rem;
+
+                            .ad-data{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0.6rem;
+
+                                .ad-icon{
+                                    width: 2.25rem;
+                                    height: 2.25rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    i{
+                                        color: $primary;
+                                        font-size: 1.8rem;
+                                    }
+                                }
+
+                                h4{
+                                    font-size: 1.4rem;
+                                    font-weight: 800;
+                                    color: $black;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                }
+                                
+                            }
+
+                            .ad-info{
+                                h3{
+                                    font-size: 1.8rem;
+                                    font-weight: 700;
+                                    font-family: 'Montserrat', sans-serif;
+                                    color: $black;
+                                    margin-bottom: 1rem;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                }
+                            }
+
+                            .ad-packets{
+                                width: 100%;
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                align-items: center;
+
+                                .packet{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    text-align: center;
+                                    gap: 1rem;
+
+                                    .packet-count{
+                                        width: 4rem;
+                                        height: 4rem;
+                                        border-radius: 0.6rem;
+                                        background-color: $primary;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        p{
+                                            font-size: 1.8rem;
+                                            font-weight: 800;
+                                            color: $white;
+                                        }
+
+                                    }
+
+                                    h4{
+                                        font-size: 1.4rem;
+                                        font-weight: 800;
+                                        color: $black;
+                                    }
+                                }
+                            }
+
+                            .ad-features{
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .ad-offers{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 1rem;
+
+                                    i{
+                                        font-size: 2rem;
+                                        color: $primary;
+                                    }
+
+                                    p{
+                                        font-size: 1.6rem;
+                                        font-weight: 800;
+                                        color: $black; 
+                                    }
+                                }
+
+                                .ad-button{
+                                    button{
+                                        @include button(false, primary, true);
+                                    }
+                                }
+                            }
+
+                            hr{
+                                @extend %line;
+                            }
+                        }
+                    }
+                }
+                #ads-swipe{
+                    @extend %swipe;
+                }
+            }
+
+            article#crew{
+                #crew-title{
+                    @extend %title;
+                    text-align: left;
+                    align-items: flex-start;
+                    flex-wrap: wrap;
+                    
+                    p{
+                        margin-bottom: 2rem;
+                    }
+
+                    #crew-navigation{
+                        width: 100%;
+                        padding: 1rem;
+                        border-radius: 1rem;
+                        background-color: $white;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 1rem;
+
+                        button{
+                            @include button(false, primary, false);
+                        }
+                    }
+                }
+
+                #crew-content{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+
+                    .crew-group{
+                        width: 100%;
+                        @extend %box;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+
+                        h2{
+                            font-size: 1.6rem;
+                            font-weight: 700;
+                            color: $black;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        .member{  
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1.5rem;
+    
+                            .member-title{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 0.5rem;
+    
+                                .member-info{
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 1rem;
+    
+                                    .member-icon{
+                                        width: 4.5rem;
+                                        height: 4.5rem;
+                                        border-radius: 0.6rem;
+                                        background-color: $primary;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+
+                                        i{
+                                            font-size: 1.8rem;
+                                            color: $white;
+                                        }
+                                    }
+
+                                    h3{
+                                        font-size: 1.6rem;
+                                        font-weight: 700;
+                                        font-family: 'Montserrat', sans-serif;
+                                        color: $black;
+                                    }
+                                }
+    
+                                button{
+                                    cursor: pointer;
+                                    background-color: transparent;
+                                    width: 4.5rem;
+                                    height: 4.5rem;
+                                    border: 0.2rem solid $primary;
+                                    border-radius: 1rem;
+    
+                                    i{
+                                        font-size: 1.8rem;
+                                        color: $primary;
+                                    }
+                                }
+                            }
+    
+                            .member-data{
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 0.6rem;
+
+                                .data-icon{
+                                    width: 2.25rem;
+                                    height: 2.25rem;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    i{
+                                        color: $primary;
+                                        font-size: 1.8rem;
+                                    }
+                                }
+
+                                h4{
+                                    font-size: 1.4rem;
+                                    font-weight: 800;
+                                    color: $black;
+                                }
+
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+
+                        hr{
+                            @extend %line;
+                        }
+                    }
+                }
+
+                #vehicle-swipe, #member-swipe{
+                    @extend %swipe;
+
+                    #swipe-content{
+                        .swipe{
+                            display: block;
+                        }
+                    }
+
+                    #swipe-button{
+                        button{
+                            @include button(true, primary, false);
+                        }
+                    }
+                }
+            }
+
+            article#messages{
+                height: 100%;
+
+                #messages-title{
+                    @extend %title;
+                    text-align: left;
+                    align-items: flex-start;
+                }
+
+                #messages-content{
+                    @extend %box;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+                    overflow: hidden;
+
+                    #messages-chats{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .chat{
+                            cursor: pointer;
+                            width: 100%;
+                            padding: 2rem;
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap: 1.5rem;
+                            transition: background-color 0.3s ease;
+
+                            &:hover,&.active{
+                                background-color: $primary;
+
+                                .chat-profile{
+                                    background-color: $white;
+                                    
+                                    i{
+                                        color: $primary;
+                                    }
+                                }
+
+                                .chat-info{
+                                    h2,p{
+                                        color: $white;
+                                    }
+                                }
+                            }
+
+                            .chat-profile{
+                                width: 4.5rem;
+                                height: 4.5rem;
+                                flex-shrink: 0;
+                                background-color: $primary;
+                                border-radius: 1rem;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                transition-property: background-color,color;
+                                transition: 0.3s ease;
+
+                                i{
+                                    font-size: 1.8rem;
+                                    color: $white;
+                                }
+                            }
+
+                            .chat-info{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                gap: 0.4rem;
+
+                                h2{
+                                    font-size: 1.6rem;
+                                    font-weight: 600;
+                                    font-family: 'Montserrat', sans-serif;
+                                    color: $black;
+                                    transition: color 0.3s ease;
+                                }
+    
+                                p{
+                                    @extend %text;
+                                    font-size: 1.4rem;
+                                    transition: color 0.3s ease;
+                                }
+                            }
+                        }
+
+                        hr{
+                            @extend %line;
+                        }
+                    }
+                }
+            }
+
+            article#chat{
+                width: inherit;
+                height: inherit;
+                overflow: hidden;
+                display: grid;
+                grid-template-rows: auto 1fr auto;
+                background-color: $white;
+                border-radius: 1rem;
+
+                #chat-title{
+                    padding: 2rem;
+                    border-bottom: $border;
+
+                    h1{
+                        font-size: 2rem;
+                        font-weight: 600;
+                        font-family: 'Montserrat', sans-serif;
+                        color: $black;
+                    }
+                }
+
+                #chat-content{
+                    overflow: scroll;
+                    padding: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 3rem;
+
+                    .message{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.8rem;
+                        
+                        p{
+                            width: initial;
+                            padding: 1.6rem;
+                            font-size: 1.4rem;
+                            font-weight: 600;
+                            line-height: 1.6;
+                            color: $black;
+                        }
+
+                        span{
+                            @extend %text;
+                            font-size: 1.2rem;
+                        }
+
+                        &.incoming{
+                            align-items: flex-start;
+                            
+                            p{
+                                border-radius: 0 0.8rem 0.8rem 0.8rem;
+                                background-color: $background;
+                            }
+                        }
+
+                        &.outgoing{
+                            align-items: flex-end;
+                            
+                            p{
+                                border-radius: 0.8rem 0 0.8rem 0.8rem;
+                                background-color: rgba(255, 146, 81, 0.25);
+                            }
+                        }
+                    }
+                }
+
+                #chat-send{
+                    padding: 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    border-top: $border;
+                    gap: 2rem;
+
+                    textarea{
+                        width: 100%;
+                        height: 100%;
+                        overflow: scroll;
+                        border: none;
+                        outline: none;
+                        resize: none;
+                        @extend %text;
+                        font-size: 1.4rem;
+                        color: $black;
+
+                        &::placeholder{
+                            color: $text;
+                        }
+                    }
+
+                    button{
+                        @include button(false, primary, true);
+                        width: initial;
+                    }
+                }
+            }
+        }
+    }
+
+    section#request{
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        gap: 3rem;
+
+        #request-situation{
+            overflow: hidden;
+            background-color: $white;
+            border-radius: 2rem;
+            padding: 0.3rem;
+
+            #request-progress{
+                width: 0%;
+                height: 0.7rem;
+                border-radius: 2rem;
+                background-color: $primary;
+                transition: width 0.75s ease-out;
+            }
+        }
+        
+        #request-content{
+            position: relative;
+
+            .step{
+                overflow: auto;
+                position: absolute;
+                top: 0; left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $background;
+                display: none;
+
+                &:first-child{
+                    display: block;
+                }
+
+                .step-container{
+                    height: 100%;
+                    display: grid;
+                    grid-template-rows: auto 1fr;
+
+                    .step-title{
+                        @extend %title;
+                    }
+    
+                    .step-content{
+                        position: relative;
+                        overflow-y: scroll;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 2rem;
+                        
+                        .step-loading{
+                            position: absolute;
+                            top: 0; left: 0;
+                            z-index: 97;
+                            width: 100%;
+                            height: 100%;
+                            background-color: $background;
+
+                            .loading-content{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+
+                                i{
+                                    font-size: 3rem;
+                                    color: $text;
+                                }
+                            }
+                        }
+    
+                        .option{
+                            cursor: pointer;
+                            width: 100%;
+                            padding: 2rem;
+                            border-radius: 1rem;
+                            background-color: $white;
+                            transition: background-color 0.3s ease;
+    
+                            &:hover,&.active{
+                                background-color: $primary;
+    
+                                p{
+                                    color: $white;
+                                }
+                            }
+                            
+                            p{
+                                font-size: 1.6rem;
+                                font-weight: 700;
+                                font-family: 'Montserrat', sans-serif;
+                                color: $black;
+                                transition: color 0.3s ease;
+                            }
+                        }
+
+                        .form-control{
+                            @extend %input;
+                        }
+                    }
+                }
+
+                &#category{
+                    .step-container{
+                        .step-content{
+                            .option{
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 1.5rem;
+        
+                                &:hover,&.active{
+                                    .option-icon{
+                                        background-color: $white;
+        
+                                        i{
+                                            color: $primary;
+                                        }
+                                    }
+                                }
+        
+                                .option-icon{
+                                    width: 8rem;
+                                    height: 8rem;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: $primary;
+                                    transition: background-color 0.3s ease;
+        
+                                    i{
+                                        font-size: 3rem;
+                                        color: $white;
+                                        transition: color 0.3s ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &#count{
+                    .step-container{
+                        grid-template-rows: auto 1fr auto;
+
+                        .step-content{
+                            .option{
+                                background-color: transparent;
+                                padding: 0;
+                                display: grid;
+                                grid-template-columns: auto 1fr auto;
+                                align-items: center;
+
+                                .option-button{
+                                    button{
+                                        width: 4.6rem;
+                                        height: 4.6rem;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        @include button(false, secondary, false);
+                                        border: $border;
+                                        color: $text;
+
+                                        i{
+                                            font-size: 1.6rem;
+                                            color: $text;
+                                        }
+                                    }
+                                }
+
+                                .option-count{
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    text-align: center;
+                                    gap: 0.5rem;
+
+                                    h3{
+                                        font-size: 3.25rem;
+                                        font-weight: 700;
+                                        font-family: 'Montserrat', sans-serif;
+                                        color: $black;
+                                    }
+
+                                    h4{
+                                        font-size: 1.6rem;
+                                        font-weight: 700;
+                                        font-family: 'Montserrat', sans-serif;
+                                        color: $black;
+                                    }
+
+                                    p{
+                                        @extend %text;
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                            }
+
+                            hr{
+                                @extend %line;
+                            }
+                        }
+
+                        .step-info{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            gap: 0.5rem;
+
+                            p{
+                                @extend %text;
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #request-button{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+
+            button{
+                &#prev{
+                    @include button(false, secondary, false);
+                    border: $border;
+
+                    &.small{
+                        width: initial;
+                        padding: 1.5rem 2rem;
+
+                        i{
+                            display: block;
+                        }
+                        p{
+                            display: none;
+                        }
+                    }
+                    
+                    i,p{
+                        color: $text;
+                    }
+
+                    i{
+                        display: none;
+                    }
+                }
+
+                &#next{
+                    @include button(true, primary, false);
+                }
+            }
+        }
+    }
+}
+
+/*#endregion*/
+
+/*#region Responsive Codes*/
+
+@media screen and (min-width: 469px){
+    %swipe{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    html{
+        font-size: 10px;
+    }
+
+    section{
+        position: static;
+        max-width: 50rem;
+        height: initial;
+    }
+
+    main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #error{
+            #error-container{
+                max-width: 50rem;
+                height: initial;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        #success{
+            #success-container{
+                max-width: 50rem;
+                height: initial;
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        section#login, section#register{
+            gap: 3rem;
+        }
+
+        section#home{
+            background-color: transparent;
+            background-image: none;
+            border-radius: 1rem;
+            gap: 3rem;
+        }
+
+        section#request{
+            height: 84rem;
+        }
+
+        section#customer{
+            max-width: 100%;
+            height: 100vh;
+            padding: 12rem 3rem 3rem 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #customer-content{
+                max-width: 100rem;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        section#business{
+            max-width: 100%;
+            height: 100vh;
+            padding: 12rem 3rem 3rem 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            #business-content{
+                max-width: 100rem;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px){
+    html{
+        font-size: 9.75px;
+    }
+}
+@media screen and (max-width: 400px){
+    html{
+        font-size: 9.5px;
+    }
+}
+@media screen and (max-width: 375px){
+    html{
+        font-size: 9.25px;
+    }
+}
+@media screen and (max-width: 350px){
+    html{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 325px){
+    html{
+        font-size: 8.75px;
+    }
+}
+
+/*#endregion*/
